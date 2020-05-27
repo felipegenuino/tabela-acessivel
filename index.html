@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendimento SAJ | Chamadas de produção</title>
+  
+  <style>
+    * {margin: 0; padding: 0}
+    *, :after, :before {  box-sizing: border-box; }
+    a{ color: #007db5}
+    a:hover {  color: #959635; text-decoration: underline; }
+    body{  background-color: #1D3649;    font-size: 14px;  font-family: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif; font-weight: 400; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;  } 
+    .header{padding: 10px 30px; background: #1E2157; color: #fff; border-bottom: 4px solid #29417a; font-size: 0.8em; }
+    .sr-only{ position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; -webkit-clip-path: inset(50%); clip-path: inset(50%); border: 0; }
+    .container{  display: flex;  width: 100%; }
+    .container main{ width: calc(100% - 480px); padding: 0 20px 40px 20px} 
+    .container aside{ width: 480px; padding: 0 20px}  
+    .componente{  background: #ffffff;  width: 100%; display: flex; flex-direction: column;   margin-top: 20px;}
+    .nav__list-links{}
+    .nav__list{list-style: none;  padding: 0;  margin: 10px 10px 20px 10px;}
+    .nav__list-item{    margin-bottom: 10px;}
+    .componente__header{ flex-direction: row; align-items: center; display: flex; margin: 20px 10px 5px 10px;  }
+    .componente__header-title{ font-size: 1.40rem; font-weight: 400;}
+    .componente__header-item{}
+    .componente__header-item--last{} 
+    .componente__header-nav{}
+    .componente__header-nav-list{ list-style: none; display: flex; margin: 0 0 0 20px; padding: 0; }
+    .componente__header-nav-list-item{ margin-right: 5px;  display: flex; }
+    .componente__header-nav-list-item button{ border: none; background: none;  cursor: pointer; }
+    .componente__header-nav-list-item button .icon-fake{ border: 1px solid #ddd;  font-size: 0;  width: 18px;  height: 18px;  display: flex;   background: #eee; }
+    .componente__header-item--last{ margin-left: auto;}
+    .componente__body-table{ border-collapse: separate; color: #000000; font-size: 13px; font-style: normal; line-height: 18px; margin-bottom: 18px; background: #ffffff; width: 100%;  }
+    .componente__body-table tr:nth-child(even) {  background-color: #f2f2f2;}
+    .componente__body-table a{ text-decoration: none}
+    .componente__body-table a:hover{ text-decoration: underline}
+    .componente__body-table thead tr th { font-weight: 700; text-align: left; border-bottom: 2px solid #dee2e6; background: #ededed; padding: 5px; }
+   .componente__body-table thead tr th a { color: #1D3649; }
+    .componente__body-table tbody tr td { padding: 5px 5px; }
+    .componente__footer{display: flex;  border-top: 2px solid #dee2e6; }
+    .componente__footer-item{ padding: 10px 10px;}
+    .componente__footer-item--last{ margin-left: auto;}
+    .componente__footer-paginacao{} 
+  </style> 
+</head>
+<body> 
+
+<header class="header"> 
+    <h1>A1. Chamadas de produção<h1> 
+</header>
+
+  <div class="container">  
+    <main>  
+      <section class="componente" aria-label="Painel: Aguardando atendimento" >
+        <header class="componente__header" role="region" aria-label="Cabeçalho">
+          <div class="componente__header-item">
+            <h2 class="componente__header-title">Aguardando atendimento</h2>
+          </div>
+          <div class="componente__header-item">
+            <nav class="componente__header-nav" aria-label="Opçoes da tabela">
+              <ul class="componente__header-nav-list">
+                <li class="componente__header-nav-list-item"> <button type="button" aria-label="Filtrar na tabela Aguardando atendimento" title="Filtrar na tabela Aguardando atendimento"> <i aria-hidden="true" class="icon-fake"> icone-filtro </i> </button> </li>
+                <li class="componente__header-nav-list-item"> <button type="button" aria-label="Buscar na tabela Aguardando atendimento" title="Buscar na tabela Aguardando atendimento"> <i aria-hidden="true" class="icon-fake"> icone-busca</i> </button> </li>
+                <li class="componente__header-nav-list-item"> <button type="button" aria-label="Baixar tabela Aguardando atendimento" title="Baixar tabela Aguardando atendimento"> <i aria-hidden="true" class="icon-fake"> icone-baixar</i> </button>  </li>
+              </ul>
+            </nav>
+          </div> 
+          <div class="componente__header-item componente__header-item--last"> 
+            <nav class="componente__header-nav" aria-label="Opções do painel">
+              <ul class="componente__header-nav-list">
+                <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recarregar painel Aguardando atendimento" title="Recarregar painel Aguardando atendimento"> <i aria-hidden="true" class="icon-fake"> icone-reload </i> </button> </li>
+                <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recolher painel Aguardando atendimento" title="Recolher painel Aguardando atendimento"> <i aria-hidden="true" class="icon-fake"> icone-maximize</i> </button> </li>
+              </ul>
+            </nav> 
+          </div>
+        </header>
+        <div class="componente__body"  role="region" aria-label="Corpo da tabela">
+          <table class="componente__body-table" summary="Aguardando atendimento">
+            <caption class="sr-only">Aguardando atendimento</caption>
+            <thead>
+              <tr>
+                <th id="chamado" width="80px"> <a href="#">Chamado</a> </th>
+                <th id="resumo"> <a href="#">Resumo</a> </th>
+                <th id="severidade"> <a href="#">Severidade</a> </th>
+                <th id="urgente"><a href="#">Urgente</a> </th>
+                <th id="prazo"><a href="#">Prazo</a> </th>
+                <th id="vencido"><a href="#">Vencido</a> </th>
+                <th id="usu-afetado"> <a href="#">Usuário afetado</a> </th>
+                <th id="status"><a href="#">Status</a> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>  
+                <th id="16890" headers="chamado"> <a href="#" title="Abrir registro">16890</a> </th>
+                <td headers="16890 resumo"> <a href="#" title="Abrir registro"> Problemas no salvamento das GRs nos autos 0048316-70.2019.8.12.0001 e 0042670-79.2019.8.12.0001 </a> </td>
+                <td headers="16890 severidade"> <a href="#" title="Abrir registro"> 1 - Alta </a> </td>
+                <td headers="16890 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                <td headers="16890 prazo"> <a href="#" title="Abrir registro"> 12/5/20 14:53:20  </a> </td>
+                <td headers="16890 vencido"> <a href="#" title="Abrir registro">  S  </a> </td>
+                <td headers="16890 usu-afetado"> <a href="#" title="Abrir registro"> TJMS.LENIEL.NEPOMUCENO </a> </td>
+                <td headers="16890 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+              </tr>
+              <tr>
+                <th id="18258" header="chamado"> <a href="#" title="Abrir registro">  18258 </a> </th>
+                <td headers="18258 resumo"> <a href="#" title="Abrir registro">  PG-LVG: Regime não está saindo na GR </a> </td>
+                <td headers="18258 severidade">  <a href="#" title="Abrir registro">  1 - Alta  </a> </td>
+                <td headers="18258 urgente"> <a href="#" title="Abrir registro">  S  </a> </td>
+                <td headers="18258 prazo">  <a href="#" title="Abrir registro"> 16/5/20  17:56:43  </a> </td>
+                <td headers="18258 vencido"> <a href="#" title="Abrir registro"> S  </td>
+                  <td headers="18258 usu-afetado"> <a href="#" title="Abrir registro">  TJMS.LUCILENE.GONCALVES </a> </td>
+                  <td headers="18258 status"> <a href="#" title="Abrir registro">  Ag. Atendimento N2 </a> </td>
+                </tr>
+                <tr>
+                  <th id="18263" header="chamado"> <a href="#" title="Abrir registro"> 18263 </a> </th>
+                  <td headers="18263 resumo"> <a href="#" title="Abrir registro"> PG-LNZ-Erro no cadastro de partes do processo 0021665-98.2019.8.12.0001. </a> </td>
+                  <td headers="18263 severidade"> <a href="#" title="Abrir registro">  1 - Alta </a>  </td>
+                  <td headers="18263 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                  <td headers="18263 prazo"> <a href="#" title="Abrir registro"> 16/5/20 17:56:43 </a>  </td>
+                  <td headers="18263 vencido"> <a href="#" title="Abrir registro"> S </a> </td>
+                  <td headers="18263 usu-afetado"> <a href="#" title="Abrir registro"> TJMS.LUCILENE.GONCALVES </a> </td>
+                  <td headers="18263 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                </tr>
+                <tr>
+                  <th id="18478" header="chamado"> <a href="#" title="Abrir registro"> 18478 </a> </th>
+                  <td headers="18478 resumo"> <a href="#" title="Abrir registro"> PG-LNZ-Problemas na expedição da Guia de Execução nos autos n. 0005594-87.2016.8.12.0110. </a> </td>
+                  <td headers="18478 severidade">  <a href="#" title="Abrir registro"> 1 - Alta  </a>  </td>
+                  <td headers="18478 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                  <td headers="18478 prazo"> <a href="#" title="Abrir registro"> 20/5/20 09:00:00 </a> </td>
+                  <td headers="18478 vencido"> <a href="#" title="Abrir registro"> N</td>
+                    <td headers="18478 usu-afetado"> <a href="#" title="Abrir registro"> TJMS.LUIS.AUGUSTO </a> </td>
+                    <td headers="18478 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                  </tr>
+                  <tr>
+                    <th id="17341" header="chamado"> <a href="#" title="Abrir registro"> 17341 </a> </th>
+                    <td headers="17341 resumo"> <a href="#" title="Abrir registro"> Seguimento da Operações, PG5 </a> </td>
+                    <td headers="17341 severidade"> <a href="#" title="Abrir registro">  5 - Indefinida </a> </td>
+                    <td headers="17341 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                    <td headers="17341 prazo"> </td>
+                    <td headers="17341 vencido"> <a href="#" title="Abrir registro"> N</td>
+                      <td headers="17341 usu-afetado"> <a href="#" title="Abrir registro"> DENNY.TROVATI </a> </td>
+                      <td headers="17341 status"> <a href="#" title="Abrir registro">  Ag. Atendimento N2 </a> </td>
+                    </tr>
+                    <tr>
+                      <th id="16428" header="chamado"> <a href="#" title="Abrir registro"> 16428 </a> </th>
+                      <td headers="16428 resumo"> <a href="#" title="Abrir registro"> Seguimento da Operações, PG5 </a> </td>
+                      <td headers="16428 severidade"> <a href="#" title="Abrir registro">  5 - Indefinida </a> </td>
+                      <td headers="16428 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                      <td headers="16428 prazo"> </td>
+                      <td headers="16428 vencido"> <a href="#" title="Abrir registro"> N </a> </td>
+                      <td headers="16428 usu-afetado"> <a href="#" title="Abrir registro">  ANALISECONF </a> </td>
+                      <td headers="16428 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                    </tr>
+                    <tr>
+                      <th id="16576" header="chamado"> <a href="#" title="Abrir registro"> 16576 </a> </th>
+                      <td headers="16576 resumo"> <a href="#" title="Abrir registro"> Seguimento da Operações, PG5 </a> </td>
+                      <td headers="16576 severidade"> <a href="#" title="Abrir registro">  5 - Indefinida </a> </td>
+                      <td headers="16576 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                      <td headers="16576 prazo"> </td>
+                      <td headers="16576 vencido"> <a href="#" title="Abrir registro"> N </a> </td>
+                      <td headers="16576 usu-afetado"> <a href="#" title="Abrir registro"> RAFAEL.AUGUSTO </a> </td>
+                      <td headers="16576 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                    </tr>
+                    <tr>
+                      <th id="16631" header="chamado"> <a href="#" title="Abrir registro"> 16631 </a> </th>
+                      <td headers="16631 resumo"> <a href="#" title="Abrir registro"> Seguimento da Operações, PG5 </a> </td>
+                      <td headers="16631 severidade">  <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                      <td headers="16631 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                      <td headers="16631 prazo"> </td>
+                      <td headers="16631 vencido"> <a href="#" title="Abrir registro"> N </a> </td>
+                      <td headers="16631 usu-afetado"> <a href="#" title="Abrir registro"> ANALISECONF </a> </td>
+                      <td headers="16631 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                    </tr>
+                    <tr>
+                      <th id="16695" header="chamado"> <a href="#" title="Abrir registro"> 16695 </a> </th>
+                      <td headers="16695 resumo"> <a href="#" title="Abrir registro"> Seguimento da Operações, PG5 </a> </td>
+                      <td headers="16695 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                      <td headers="16695 urgente"> <a href="#" title="Abrir registro"> S </a> </td>
+                      <td headers="16695 prazo"> </td>
+                      <td headers="16695 vencido"> <a href="#" title="Abrir registro"> N </a> </td>
+                      <td headers="16695 usu-afetado"> <a href="#" title="Abrir registro"> ANALISECONF </a> </td>
+                      <td headers="16695 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <footer class="componente__footer" role="region">
+                <div class="componente__footer-item"> <a href="#">Configurar opções de gráfico</a> </div>
+                <div class="componente__footer-item"> </div>
+                <div class="componente__footer-item componente__footer-item--last">
+                  <nav class="componente__footer-paginacao" aria-label="Paginação">
+                    <strong>1-10 de 37 </strong>
+                    <a href="#">Próxima página</a> </div>
+                  </nav> 
+                </footer> 
+              </section> 
+              
+              
+              <section class="componente" aria-label="Painel: Aguardando avaliação de rejeite" >
+                <header class="componente__header" role="region" aria-label="Cabeçalho">
+                  <div class="componente__header-item">
+                    <h2 class="componente__header-title"> Aguardando avaliação de rejeite</h2>
+                  </div>
+                  <div class="componente__header-item">
+                    <nav class="componente__header-nav" aria-label="Opçoes da tabela">
+                      <ul class="componente__header-nav-list">
+                        <li class="componente__header-nav-list-item"> <button type="button" aria-label="Filtrar na tabela Aguardando avaliação de rejeite" title="Filtrar na tabela Aguardando avaliação de rejeite"> <i aria-hidden="true" class="icon-fake"> icone-filtro </i> </button> </li>
+                        <li class="componente__header-nav-list-item"> <button type="button" aria-label="Buscar na tabela Aguardando avaliação de rejeite" title="Buscar na tabela Aguardando avaliação de rejeite"> <i aria-hidden="true" class="icon-fake"> icone-busca</i> </button> </li>
+                        <li class="componente__header-nav-list-item"> <button type="button" aria-label="Baixar tabela Aguardando avaliação de rejeite" title="Baixar tabela Aguardando avaliação de rejeite"> <i aria-hidden="true" class="icon-fake"> icone-baixar</i> </button>  </li>
+                      </ul>
+                    </nav>
+                  </div> 
+                  <div class="componente__header-item componente__header-item--last"> 
+                    <nav class="componente__header-nav" aria-label="Opções do painel">
+                      <ul class="componente__header-nav-list">
+                        <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recarregar painel Aguardando avaliação de rejeite" title="Recarregar painel Aguardando avaliação de rejeite"> <i aria-hidden="true" class="icon-fake"> icone-reload </i> </button> </li>
+                        <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recolher painel Aguardando avaliação de rejeite" title="Recolher painel Aguardando avaliação de rejeite"> <i aria-hidden="true" class="icon-fake"> icone-maximize</i> </button> </li>
+                      </ul>
+                    </nav> 
+                  </div>
+                </header>
+                <div class="componente__body"  role="region" aria-label="Corpo da tabela">
+                  <table class="componente__body-table" summary="Aguardando avaliação de rejeite">
+                    <caption class="sr-only">Aguardando avaliação de rejeite</caption>
+                    <thead>
+                      <tr>
+                        <th id="chamado" width="80px"> <a href="#">Chamado</a> </th>
+                        <th id="resumo"> <a href="#">Resumo</a> </th>
+                        <th id="severidade"> <a href="#">Severidade</a> </th>
+                        <th id="urgente"><a href="#">Urgente</a> </th>
+                        <th id="prazo"><a href="#">Prazo</a> </th>
+                        <th id="vencido"><a href="#">Vencido</a> </th>
+                        <th id="usu-afetado"> <a href="#">Usuário afetado</a> </th>
+                        <th id="status"><a href="#">Status</a> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>  
+                        <th id="17341" headers="chamado"> <a href="#" title="Abrir registro">17341</a> </th>
+                        <td headers="17341 resumo"> <a href="#" title="Abrir registro">  Seguimento das operações, PG5 </a> </td>
+                        <td headers="17341 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                        <td headers="17341 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                        <td headers="17341 prazo">  </td>
+                        <td headers="17341 vencido"> <a href="#" title="Abrir registro">N</a> </td>
+                        <td headers="17341 usu-afetado"> <a href="#" title="Abrir registro"> DENNY.TROVATO </a> </td>
+                        <td headers="17341 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                      </tr>
+                      <tr>  
+                        <th id="16576" headers="chamado"> <a href="#" title="Abrir registro">16576</a> </th>
+                        <td headers="16576 resumo"> <a href="#" title="Abrir registro">  Seguimento das operações, PG5 </a> </td>
+                        <td headers="16576 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                        <td headers="16576 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                        <td headers="16576 prazo">  </td>
+                        <td headers="16576 vencido"> <a href="#" title="Abrir registro">N</a> </td>
+                        <td headers="16576 usu-afetado"> <a href="#" title="Abrir registro"> RAFAEL.AUGUSTO </a> </td>
+                        <td headers="16576 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                      </tr>
+                      <tr>  
+                        <th id="16595" headers="chamado"> <a href="#" title="Abrir registro">16595</a> </th>
+                        <td headers="16595 resumo"> <a href="#" title="Abrir registro">  Seguimento das operações, PG5 </a> </td>
+                        <td headers="16595 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                        <td headers="16595 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                        <td headers="16595 prazo">  </td>
+                        <td headers="16595 vencido"> <a href="#" title="Abrir registro">N</a> </td>
+                        <td headers="16595 usu-afetado"> <a href="#" title="Abrir registro"> ANALISECONF </a> </td>
+                        <td headers="16595 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                      </tr>
+                      <tr>  
+                        <th id="16695" headers="chamado"> <a href="#" title="Abrir registro">16695</a> </th>
+                        <td headers="16695 resumo"> <a href="#" title="Abrir registro">  Seguimento das operações, PG5 </a> </td>
+                        <td headers="16695 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                        <td headers="16695 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                        <td headers="16695 prazo">  </td>
+                        <td headers="16695 vencido"> <a href="#" title="Abrir registro">N</a> </td>
+                        <td headers="16695 usu-afetado"> <a href="#" title="Abrir registro"> ANALISECONF </a> </td>
+                        <td headers="16695 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                      </tr>
+                      <tr>  
+                        <th id="17022" headers="chamado"> <a href="#" title="Abrir registro">17022</a> </th>
+                        <td headers="17022 resumo"> <a href="#" title="Abrir registro">  Seguimento das operações, WEB </a> </td>
+                        <td headers="17022 severidade"> <a href="#" title="Abrir registro"> 5 - Indefinida </a> </td>
+                        <td headers="17022 urgente"> <a href="#" title="Abrir registro"> S  </a> </td>
+                        <td headers="17022 prazo">  </td>
+                        <td headers="17022 vencido"> <a href="#" title="Abrir registro">N</a> </td>
+                        <td headers="17022 usu-afetado"> <a href="#" title="Abrir registro"> ANALISECONF </a> </td>
+                        <td headers="17022 status"> <a href="#" title="Abrir registro"> Ag. Atendimento N2 </a> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <footer class="componente__footer" role="region">
+                  <div class="componente__footer-item"> <a href="#">Configurar opções de gráfico</a> </div>
+                  <div class="componente__footer-item">    </div>
+                  <div class="componente__footer-item componente__footer-item--last">
+                    <nav class="componente__footer-paginacao" aria-label="Paginação">
+                      <strong>1-5 de 37 </strong>
+                      <a href="#">Próxima página</a> </div>
+                    </nav> 
+                  </footer> 
+                </section> 
+                
+                
+                
+              </main> 
+              
+              <aside>
+                <section class="componente" aria-label="Painel: Favoritos" >
+                  <header class="componente__header" role="region" aria-label="Cabeçalho">
+                    <div class="componente__header-item">
+                      <h2 class="componente__header-title" >Favoritos</h2>
+                    </div> 
+                    <div class="componente__header-item componente__header-item--last"> 
+                      <nav class="componente__header-nav" aria-label="Opções do painel">
+                        <ul class="componente__header-nav-list">
+                          <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recarregar painel Favoritos" title="Recarregar painel Favoritos"> <i aria-hidden="true" class="icon-fake"> icone-reload </i> </button> </li>
+                          <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recolher painel Favoritos" title="Recolher painel Favoritos"> <i aria-hidden="true" class="icon-fake"> icone-maximize</i> </button> </li>
+                        </ul>
+                      </nav> 
+                    </div>
+                  </header>
+                  <div class="componente__body" role="region" aria-label="Conteúdo"> 
+                    <nav class="nav__list-links" aria-label="Links favoritos">
+                      <ul class="nav__list">
+                        <li class="nav__list-item"> <a href="#" aria-label="Ir para página: Centro de Autoatendimento">Centro de Autoatendimento</a> </li>
+                        <li class="nav__list-item"> <a href="#" aria-label="Ir para página: Visualizar solicitações de Serviço UNJ">Visualizar solicitações de Serviço UNJ</a> </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <!-- <footer  class="componente__footer"> </footer> -->
+                </section>
+                
+                <section class="componente" aria-label="Painel: Relatórios" >
+                  <header class="componente__header" role="region" aria-label="Cabeçalho">
+                    <div class="componente__header-item">
+                      <h2 class="componente__header-title">Relatórios</h2>
+                    </div> 
+                    <div class="componente__header-item componente__header-item--last"> 
+                      <nav class="componente__header-nav" aria-label="Opções do painel">
+                        <ul class="componente__header-nav-list">
+                          <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recarregar painel Relatórios" title="Recarregar painel Relatórios"> <i aria-hidden="true" class="icon-fake"> icone-reload </i> </button> </li>
+                          <li class="componente__header-nav-list-item"> <button type="button" aria-label="Recolher painel Relatórios" title="Recolher painel Relatórios"> <i aria-hidden="true" class="icon-fake"> icone-maximize</i> </button> </li>
+                        </ul>
+                      </nav> 
+                    </div>
+                  </header>
+                  <div class="componente__body" role="region" aria-label="Conteúdo"> 
+                    <nav class="nav__list-links" aria-label="Links favoritos">
+                      <ul class="nav__list">
+                        <li class="nav__list-item"> <a href="#" aria-label="Ir para página: Relatório Semanal para Clientes">Relatório Semanal para Clientes</a> </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <!-- <footer  class="componente__footer"> </footer> -->
+                </section>
+              </aside>
+              
+            </div> 
+          </body>
+          </html>
